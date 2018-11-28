@@ -40,8 +40,8 @@ public class FlightSelection extends JFrame {
 		ArrayList<Flight> ar = new Gson().fromJson(Client.create().resource( "http://localhost:8080/flight/flightlist" ).get( String.class ) , new TypeToken<ArrayList<Flight>>(){}.getType());
 		System.out.println(ar.get(0).flightNumber);
 		
-		String[] s = {"Departure","Flight Number","Destination","Type"};
-		Object[][] obj = new Object[ar.size()][6];
+		String[] s = {"Departure","Flight Number","Destination","Type","Start Price"};
+		Object[][] obj = new Object[ar.size()][5];
 		int i = 0;
 		for(i=0;i<ar.size();i++) {
 				obj[i] = ar.get(i).toArray();

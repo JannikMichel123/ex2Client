@@ -8,6 +8,7 @@ public class Flight {
 	ArrayList<Seat> UFSeats = new ArrayList<Seat>();
 	ArrayList<Seat> EPSeats = new ArrayList<Seat>();
 	ArrayList<Seat> ESeats = new ArrayList<Seat>();
+	String basePrice = "";
 
 	public Flight(String flightNumber, String type, String destination, String departureDate) {
 		super();
@@ -61,7 +62,7 @@ public class Flight {
 		}
 	}
 	public String[] toArray() {
-		String[] s = {this.departureDate,this.flightNumber,this.destination,this.type};
+		String[] s = {this.departureDate,this.flightNumber,this.destination,this.type,this.basePrice};
 		return s;
 	}
 
