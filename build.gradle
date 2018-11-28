@@ -37,3 +37,10 @@ task runRestClient(type: JavaExec) {
 	
 	main = 'RestClient'
 }
+task runSoapClient(type: JavaExec) {
+    group = 'my group'
+	description = 'Run Soap Client'
+	classpath = sourceSets.main.runtimeClasspath
+	
+	main = 'SoapClient'
+}
